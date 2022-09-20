@@ -29,7 +29,7 @@ namespace Fitnesstracker
         {
             InitializeComponent();
             conn.Open();
-            string sqlcmd = "Select * from uebungen";
+            string sqlcmd = "SELECT ueID, UebungsName, CategoryName FROM fitnesstracker.uebungen INNER JOIN categories ON categories.CategoryID = uebungen.CategoryID GROUP BY ueID Asc;";
             MySqlDataAdapter adr = new MySqlDataAdapter(sqlcmd, conn);
             adr.SelectCommand.CommandType = System.Data.CommandType.Text;
             DataSet dt = new DataSet();
@@ -46,8 +46,9 @@ namespace Fitnesstracker
                 button.Name = "btn" + i;
                 button.Content = dr[1];
                 button.Width = 200;
-                button.Height = 100;
-                label.Height = 100;
+                button.Height = 50;
+                label.Height = 50;
+                label.VerticalAlignment = VerticalAlignment.Center;
                 button.Click += new RoutedEventHandler(this.ClickEvent);
                 i++;
                 StackPanel1.Children.Add(button);
