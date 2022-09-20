@@ -40,12 +40,18 @@ namespace Fitnesstracker
 
 
                 Button button = new Button();
+                Label label = new Label();
+                label.Name = "lbl" + i;
+                label.Content = dr[2];
                 button.Name = "btn" + i;
                 button.Content = dr[1];
                 button.Width = 200;
+                button.Height = 100;
+                label.Height = 100;
                 button.Click += new RoutedEventHandler(this.ClickEvent);
                 i++;
                 StackPanel1.Children.Add(button);
+                StackPanel2.Children.Add(label);
 
 
             }

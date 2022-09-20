@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fitnesstracker"
         mc:Ignorable="d"
-        Title="NeueUebungHinzufuegenWindow" Width="250">
+        Title="NeueUebungHinzufuegenWindow" Width="570.59">
     <ScrollViewer HorizontalScrollBarVisibility="Auto">
-
-        <StackPanel Name="StackPanel1" Margin="10,10,3.6,2"/>
+        <StackPanel Name="StackPanel" HorizontalAlignment="Center" Width="550" Orientation="Horizontal">
+            <StackPanel Name="StackPanel1" Width="275"/>
+            <StackPanel Name="StackPanel2" Width="275"/>
+        </StackPanel>
     </ScrollViewer>
 </Window>
