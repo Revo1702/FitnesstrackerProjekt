@@ -1,0 +1,36 @@
+﻿<Window x:Class="FitnesstrackerMVVMSwitching.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FitnesstrackerMVVMSwitching.Views"
+             xmlns:vm="clr-namespace:FitnesstrackerMVVMSwitching.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <HierarchicalDataTemplate DataType="{x:Type vm:MainViewModel}"
+                    ItemsSource="{Binding Path=MenuItems}">
+            <ContentPresenter Content="{Binding Path=Text}" />
+        </HierarchicalDataTemplate>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" ItemsSource="{Binding Path=MenuItems}" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button Content="Neues Training Starten" Command="{Binding CloseCommand}" Height="40" Width="200" Grid.Row="2" Grid.Column="0">
+                
+            </Button>
+        </Grid>
+        <Grid />
+    </DockPanel>
+</Window>

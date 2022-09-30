@@ -1,2 +1,0 @@
-# FitnesstrackerProjekt
-Fitnesstracker mit verschiedensten Funktionen
