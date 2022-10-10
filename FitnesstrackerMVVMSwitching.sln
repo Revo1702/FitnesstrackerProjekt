@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnesstrackerMVVMSwitching
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{B10B7CA8-421D-4EFC-9ADC-C3E76CE7CF0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{A118BD40-6C25-4F7B-B96E-88C6D585C73C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B10B7CA8-421D-4EFC-9ADC-C3E76CE7CF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B10B7CA8-421D-4EFC-9ADC-C3E76CE7CF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B10B7CA8-421D-4EFC-9ADC-C3E76CE7CF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A118BD40-6C25-4F7B-B96E-88C6D585C73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A118BD40-6C25-4F7B-B96E-88C6D585C73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A118BD40-6C25-4F7B-B96E-88C6D585C73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A118BD40-6C25-4F7B-B96E-88C6D585C73C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
