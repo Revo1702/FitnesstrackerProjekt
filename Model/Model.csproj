@@ -47,6 +47,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Berechnungen.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="Uebungen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
