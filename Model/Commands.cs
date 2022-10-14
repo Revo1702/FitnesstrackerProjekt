@@ -1,6 +1,6 @@
 ﻿using Prism.Commands;
 using System;
-
+// Verschieben in Fitnesstracker/ViewModels/Commands
 namespace Model
 {
     class Commands

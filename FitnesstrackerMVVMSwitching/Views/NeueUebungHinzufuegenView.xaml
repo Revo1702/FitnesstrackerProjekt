@@ -10,7 +10,7 @@
     <Window.DataContext>
         <vm:NeueUebungHinzufuegenViewModel/>
     </Window.DataContext>
-    <Grid Name="mainGrid">
-        
-    </Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" >
+            <StackPanel Name="StackPanel" HorizontalAlignment="Center" Width="700" Orientation="Horizontal"/>
+        </ScrollViewer>
 </Window>
