@@ -20,6 +20,6 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Button Content="Zurück" Command="{Binding CloseCommand}" Height="40" Width="200" Grid.Row="2" Grid.Column="0"/>
-        <Button Content="Neue Übung hinzufügen" Command="{Binding SelectExercise}" Height="40" Width="200" Grid.Row="1" Grid.Column="0"/>
+        <Button Content="Neue Übung hinzufügen" Command="{Binding OpenUebungenHinzufuegenViewCommand}" Height="40" Width="200" Grid.Row="1" Grid.Column="0"/>
     </Grid>
 </Window>

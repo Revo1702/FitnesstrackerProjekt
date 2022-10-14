@@ -54,11 +54,5 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FitnesstrackerMVVMSwitching\FitnesstrackerMVVMSwitching.csproj">
-      <Project>{D949D9D8-1368-4306-BAC9-3C20AC874AAC}</Project>
-      <Name>FitnesstrackerMVVMSwitching</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
