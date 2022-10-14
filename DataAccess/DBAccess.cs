@@ -9,7 +9,7 @@ namespace DataAccess
     public class DBAccess
     {
         public static string connstr = "server=localhost;user=root;database=fitnesstracker;port=3306;password=root";
-        public List<Uebungen> ReadAllExercises()
+        public static List<Uebungen> ReadAllExercises()
         {
             Uebungen uebungen = new Uebungen();
             List<Uebungen> listOfUebungen = new List<Uebungen>();
@@ -30,14 +30,14 @@ namespace DataAccess
             return listOfUebungen;
         }
 
-        public MySqlConnection OpenConnection()
+        public static MySqlConnection OpenConnection()
         {
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Open();
             return conn;
         }
 
-        public MySqlConnection CloseConnection()
+        public static MySqlConnection CloseConnection()
         {
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Close();

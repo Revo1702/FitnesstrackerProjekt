@@ -2,18 +2,18 @@
 {
     public class Uebungen
     {
-        private string _name { get; set; }
-        private string _kategorie { get; set; }
+        public string Name { get; set; }
+        public string Kategorie { get; set; }
 
         public Uebungen(string name, string kategorie)
         {
-            _name = name;
-            _kategorie = kategorie;
+            Name = name;
+            Kategorie = kategorie;
         }
 
         public Uebungen()
         {
-
+            
         }
     }
 }
