@@ -101,5 +101,79 @@ namespace Model
 
             return erg;
         }
+
+        public string Kalorienrechner()
+        {
+            Console.Write("Dein alter: ");
+            double alter = Convert.ToDouble(Console.ReadLine());
+
+
+
+            Console.Write("Dein Gewicht: ");
+            double gewicht = Convert.ToDouble(Console.ReadLine());
+
+
+
+            Console.Write("Deine Größe: ");
+            double groesse = Convert.ToDouble(Console.ReadLine());
+
+
+
+            double grundumsatz = Math.Round((10 * gewicht) + (6.25 * groesse) - (5 * alter) + 5, 2);
+
+
+
+            double[] palwerte = new double[6];
+
+
+
+            palwerte[0] = 0.95;  // schlafen
+            palwerte[1] = 1.2;   // liegen
+            palwerte[2] = 1.5;   //sitzen
+            palwerte[3] = 1.7;   // stehen
+            palwerte[4] = 1.9;   //gehen
+            palwerte[5] = 2.4;   //körperliche Ansträngungen
+
+
+
+
+            double arbeitsumsatz = Math.Round(grundumsatz * palwerte[4], 2);
+
+
+
+            double gesamtumsatz = Math.Round(grundumsatz + arbeitsumsatz, 2);
+
+
+
+            string returnString = "dein täglicher Kalorienbedarf beträgt: " + gesamtumsatz;
+            return returnString;
+        }
+
+        public string BMIRechner(double weight, double height)
+        {
+            double bmi = weight / (height * height);
+
+
+
+            Console.WriteLine("Dein BMI ist: " + bmi);
+            Console.Write("Klassifizierung: ");
+            string returnString = "";
+
+
+            if (bmi < 18.5)
+                returnString = "Untergewicht";
+            else if (bmi < 25)
+                returnString = "Normalgewicht";
+            else if (bmi < 30)
+                returnString = "Übergewicht";
+            else if (bmi < 35)
+                returnString = "Adipositas Grad 1";
+            else if (bmi < 40)
+                returnString = "Adipositas Grad 2";
+            else
+                returnString = "Adipositas Grad 3";
+
+            return returnString;
+        }
     }
 }
