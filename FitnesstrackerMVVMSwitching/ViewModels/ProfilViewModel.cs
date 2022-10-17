@@ -8,5 +8,6 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
 {
     class ProfilViewModel
     {
+
     }
 }

@@ -95,3 +95,13 @@ C:\Users\PARASIC\GitHub\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\bin\De
 C:\Users\PARASIC\GitHub\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\PARASIC\GitHub\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\PARASIC\GitHub\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\FitnesstrackerMVVMSwitching.exe.config
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\FitnesstrackerMVVMSwitching.csprojAssemblyReference.cache
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\Views\MainView.g.cs
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\Views\ProfilView.g.cs
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\Views\TrainingssessionView.g.cs
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\App.g.cs
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\FitnesstrackerMVVMSwitching_MarkupCompile.cache
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\FitnesstrackerMVVMSwitching_MarkupCompile.lref
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\FitnesstrackerMVVMSwitching.exe
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\FitnesstrackerMVVMSwitching.pdb

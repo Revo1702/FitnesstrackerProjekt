@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnesstrackerMVVMSwitching.Views"
+        xmlns:vm ="clr-namespace:FitnesstrackerMVVMSwitching.ViewModels"
         mc:Ignorable="d"
         Title="ProfilView" Height="450" Width="800">
+
     <Grid>
         <Image HorizontalAlignment="Left" Height="100" Margin="24,26,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock HorizontalAlignment="Left" Margin="183,65,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Height="23" Width="90"/>

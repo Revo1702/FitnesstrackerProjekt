@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\PARASIC\GitHub\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\obj\Debug\
 FitnesstrackerMVVMSwitching
 none
 false
 DEBUG;TRACE
-C:\Users\PARASIC\GitHub\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\App.xaml
-32024072363
+C:\Users\PEKERAL\Desktop\test\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\App.xaml
+3-696012179
 
-10898052605
-126-681719657
-Views\MainView.xaml;Views\NeueUebungHinzufuegenView.xaml;Views\TrainingssessionView.xaml;
+10-1825293196
+124-977660336
+Views\MainView.xaml;Views\ProfilView.xaml;Views\TrainingssessionView.xaml;
 
-False
+True
 

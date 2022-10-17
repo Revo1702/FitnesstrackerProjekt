@@ -81,13 +81,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="ViewModels\AddExerciseViewModel.cs" />
+=======
+    <Compile Include="ViewModels\ProfilViewModel.cs" />
+>>>>>>> Stashed changes
     <Compile Include="ViewModels\TrainingssessionViewModel.cs" />
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Views\AddExerciseView.xaml.cs">
       <DependentUpon>AddExerciseView.xaml</DependentUpon>
+=======
+    <Compile Include="Views\ProfilView.xaml.cs">
+      <DependentUpon>ProfilView.xaml</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="Views\TrainingssessionView.xaml.cs">
       <DependentUpon>TrainingssessionView.xaml</DependentUpon>
@@ -125,7 +134,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< Updated upstream
     <Page Include="Views\AddExerciseView.xaml">
+=======
+    <Page Include="Views\ProfilView.xaml">
+>>>>>>> Stashed changes
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +147,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+<<<<<<< Updated upstream
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{b10b7ca8-421d-4efc-9adc-c3e76ce7cf0c}</Project>
@@ -147,5 +161,7 @@
   <ItemGroup>
     <Folder Include="ViewModels\Commands\" />
   </ItemGroup>
+=======
+>>>>>>> Stashed changes
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
