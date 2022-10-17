@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="NeueUebungHinzufuegenView" Height="450" Width="800">
     <Window.DataContext>
-        <vm:NeueUebungHinzufuegenViewModel/>
+        <vm:AddExerciseViewModel/>
     </Window.DataContext>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" >
             <StackPanel Name="StackPanel" HorizontalAlignment="Center" Width="700" Orientation="Horizontal"/>
