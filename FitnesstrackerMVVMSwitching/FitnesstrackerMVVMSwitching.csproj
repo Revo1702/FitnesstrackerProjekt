@@ -81,13 +81,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\NeueUebungHinzufuegenViewModel.cs" />
+    <Compile Include="ViewModels\AddExerciseViewModel.cs" />
     <Compile Include="ViewModels\TrainingssessionViewModel.cs" />
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\NeueUebungHinzufuegenView.xaml.cs">
-      <DependentUpon>NeueUebungHinzufuegenView.xaml</DependentUpon>
+    <Compile Include="Views\AddExerciseView.xaml.cs">
+      <DependentUpon>AddExerciseView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TrainingssessionView.xaml.cs">
       <DependentUpon>TrainingssessionView.xaml</DependentUpon>
@@ -125,7 +125,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\NeueUebungHinzufuegenView.xaml">
+    <Page Include="Views\AddExerciseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,6 +143,9 @@
       <Project>{A118BD40-6C25-4F7B-B96E-88C6D585C73C}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\Commands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

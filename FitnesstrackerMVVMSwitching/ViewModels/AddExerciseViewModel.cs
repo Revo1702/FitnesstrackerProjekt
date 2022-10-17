@@ -9,7 +9,7 @@ using static DataAccess.DBAccess;
 
 namespace FitnesstrackerMVVMSwitching.ViewModels
 {
-    class NeueUebungHinzufuegenViewModel
+    class AddExerciseViewModel
     {
         private DelegateCommand _exerciseCommand;
         StackPanel StackPanel = new StackPanel();
@@ -22,14 +22,16 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
 
         }
 
-        public NeueUebungHinzufuegenViewModel()
+        public AddExerciseViewModel()
         {
             List<Uebungen> uebungen = new List<Uebungen>(ReadAllExercises());
             int zaehler = 0;
             foreach (var i in uebungen)
             {
-                Binding binding = new Binding();
-                binding.Path = new System.Windows.PropertyPath("ExerciseCommand");
+                Binding binding = new Binding
+                {
+                    Path = new System.Windows.PropertyPath("ExerciseCommand")
+                };
                 string trimmedName = String.Concat(i.Name.Where(c => !Char.IsWhiteSpace(c)));
                 Button btn = new Button
                 {
