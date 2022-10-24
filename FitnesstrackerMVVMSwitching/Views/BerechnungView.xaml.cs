@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace FitnesstrackerMVVMSwitching.Views
 {
     /// <summary>
-    /// Interaktionslogik für BerechnungsView.xaml
+    /// Interaktionslogik für BerechnungView.xaml
     /// </summary>
-    public partial class BerechnungsView : Window
+    public partial class BerechnungView : Window
     {
-        public BerechnungsView()
+        public BerechnungView()
         {
             InitializeComponent();
         }

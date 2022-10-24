@@ -10,16 +10,16 @@
 
     <Grid>
         <Image HorizontalAlignment="Left" Height="100" Margin="24,26,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBlock HorizontalAlignment="Left" Margin="183,65,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Height="23" Width="90"/>
-        <TextBlock HorizontalAlignment="Left" Margin="183,95,0,0" TextWrapping="Wrap" Text="Nachname" VerticalAlignment="Top" Height="23" Width="90"/>
-        <TextBlock HorizontalAlignment="Left" Margin="183,125,0,0" TextWrapping="Wrap" Text="Alter" VerticalAlignment="Top" Height="23" Width="90"/>
-        <TextBlock HorizontalAlignment="Left" Margin="183,155,0,0" TextWrapping="Wrap" Text="Größe" VerticalAlignment="Top" Height="23" Width="90"/>
-        <TextBlock HorizontalAlignment="Left" Margin="183,185,0,0" TextWrapping="Wrap" Text="Gewicht" VerticalAlignment="Top" Height="23" Width="90"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="325,65,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.19,0.426"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="325,95,0,0" TextWrapping="Wrap" Text="nachname" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="325,125,0,0" TextWrapping="Wrap" Text="alter" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="325,155,0,0" TextWrapping="Wrap" Text="größe" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="325,185,0,0" TextWrapping="Wrap" Text="gewicht" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="185,65,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nachmame:" HorizontalAlignment="Left" Margin="185,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.99,0.683"/>
+        <Label Content="Alter:" HorizontalAlignment="Left" Margin="185,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="Größe:" HorizontalAlignment="Left" Margin="185,155,0,0" VerticalAlignment="Top"/>
+        <Label Content="Gewicht:" HorizontalAlignment="Left" Margin="185,185,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
