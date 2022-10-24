@@ -1,4 +1,12 @@
 FitnessTrackerMVVMSwitching/bin
 FitnessTrackerMVVMSwitching/obj
-/.vs
+.vs
 packages
+.vs/FitnesstrackerMVVMSwitching/v16/.suo
+.vs/FitnesstrackerMVVMSwitching/v16/.suo
+*.cache
+.vs/FitnesstrackerMVVMSwitching/v16/.suo
+*.cache
+*.baml
+FitnesstrackerMVVMSwitching/obj/Debug/Views/TrainingssessionView.g.i.cs
+FitnesstrackerMVVMSwitching/obj/Debug/Views/TrainingssessionView.g.cs

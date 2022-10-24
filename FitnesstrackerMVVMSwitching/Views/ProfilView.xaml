@@ -8,6 +8,8 @@
         mc:Ignorable="d"
         Title="ProfilView" Height="450" Width="800">
 
+
+
     <Grid>
         <Image HorizontalAlignment="Left" Height="100" Margin="24,26,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="325,65,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.19,0.426"/>
@@ -20,6 +22,8 @@
         <Label Content="Alter:" HorizontalAlignment="Left" Margin="185,125,0,0" VerticalAlignment="Top"/>
         <Label Content="Größe:" HorizontalAlignment="Left" Margin="185,155,0,0" VerticalAlignment="Top"/>
         <Label Content="Gewicht:" HorizontalAlignment="Left" Margin="185,185,0,0" VerticalAlignment="Top"/>
+
+
 
     </Grid>
 </Window>
