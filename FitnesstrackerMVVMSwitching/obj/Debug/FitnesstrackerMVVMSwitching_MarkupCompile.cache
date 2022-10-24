@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\PARASIC\GitHub\FitnesstrackerProjekt\FitnesstrackerMVVMSwitching\App.xaml
-32024072363
+5-634768280
 
-10898052605
+14-1410473042
 126-681719657
-Views\MainView.xaml;Views\NeueUebungHinzufuegenView.xaml;Views\TrainingssessionView.xaml;
+Views\AddExerciseView.xaml;Views\BerechnungView.xaml;Views\MainView.xaml;Views\ProfilView.xaml;Views\TrainingssessionView.xaml;
 
 False
 

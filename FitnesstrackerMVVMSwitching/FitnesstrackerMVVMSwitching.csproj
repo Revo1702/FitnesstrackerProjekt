@@ -76,18 +76,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\AddExerciseViewModel.cs" />
+    <Compile Include="ViewModels\BerechnungViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModels\NeueUebungHinzufuegenViewModel.cs" />
+    <Compile Include="ViewModels\ProfilViewModel.cs" />
     <Compile Include="ViewModels\TrainingssessionViewModel.cs" />
+    <Compile Include="Views\AddExerciseView.xaml.cs">
+      <DependentUpon>AddExerciseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BerechnungView.xaml.cs">
+      <DependentUpon>BerechnungView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\NeueUebungHinzufuegenView.xaml.cs">
-      <DependentUpon>NeueUebungHinzufuegenView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TrainingssessionView.xaml.cs">
       <DependentUpon>TrainingssessionView.xaml</DependentUpon>
@@ -111,7 +117,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,13 +126,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\AddExerciseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BerechnungView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\NeueUebungHinzufuegenView.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\ProfilView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\TrainingssessionView.xaml">
       <SubType>Designer</SubType>
