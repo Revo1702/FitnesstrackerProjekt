@@ -13,7 +13,7 @@
     <Grid>
         <Label Content="Brechnungen" HorizontalAlignment="Left" Margin="21,13,0,0" VerticalAlignment="Top" Height="26" Width="81"/>
         <Label Content="1RepMax:" HorizontalAlignment="Left" Margin="37,44,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="98,47,0,0" TextWrapping="Wrap" Text="Gewicht" VerticalAlignment="Top" Width="50"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="98,47,0,0" TextWrapping="Wrap" Text="{Binding RepMax}" VerticalAlignment="Top" Width="50"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="169,47,0,0" TextWrapping="Wrap" Text="Wiederholungen" VerticalAlignment="Top" Width="96"/>
 
     </Grid>

@@ -8,6 +8,15 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
 {
     class BerechnungViewModel
     {
+
+        private int _repMax;
+
+        public int RepMax
+        {
+            get { return _repMax; }
+            set { _repMax = value; }
+        }
+
         public BerechnungViewModel()
         {
 
