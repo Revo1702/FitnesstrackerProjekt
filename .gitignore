@@ -1,2 +1,4 @@
-dir_to_ignore/FitnessTrackerMVVMSwitching/bin
-dir_to_ignore/FitnessTrackerMVVMSwitching/obj
+FitnessTrackerMVVMSwitching/bin
+FitnessTrackerMVVMSwitching/obj
+/.vs
+
