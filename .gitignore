@@ -10,3 +10,7 @@ packages
 *.baml
 FitnesstrackerMVVMSwitching/obj/Debug/Views/TrainingssessionView.g.i.cs
 FitnesstrackerMVVMSwitching/obj/Debug/Views/TrainingssessionView.g.cs
+Model/bin
+Model/obj
+DataAccess/bin
+DataAccess/obj
