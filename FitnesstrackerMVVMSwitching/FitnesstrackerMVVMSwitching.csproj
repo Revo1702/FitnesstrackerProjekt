@@ -79,6 +79,7 @@
     <Compile Include="Berechnungen.cs" />
     <Compile Include="ViewModels\AddExerciseViewModel.cs" />
     <Compile Include="ViewModels\BerechnungViewModel.cs" />
+    <Compile Include="ViewModels\INotifyOrioertyChanged.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>

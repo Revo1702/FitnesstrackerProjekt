@@ -43,6 +43,15 @@ namespace DataAccess
             conn.Close();
             return conn;
         }
+
+        public static void ProfilSpeichern(string ProfilName, string ProfilNachname, int Alter, double Groesse, double Gewicht)
+        {
+            var conn = OpenConnection();
+            string sqlcmd = "INSERT INTO fitnesstracker.profil (ProfilName,ProfilNachname,Alter,Groesse,Gewicht) VALUES (@ProfilName,@ProfilNachname,@Alter,@Groesse,@Gewicht)";
+            MySqlCommand command = new MySqlCommand(sqlcmd, conn);
+            command.ExecuteNonQuery();
+                    
+        }
     }
 }
 
