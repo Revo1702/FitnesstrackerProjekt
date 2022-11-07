@@ -86,7 +86,7 @@ namespace Model
 
 
 
-                    erg = zwanzigKGPlatte + "," + zehnKGPlatte + "," + fuenfKGPlatte + "," + zweikommafuenfKGPlatte + "," + einskommazweifuenfKGPlatte;
+                    erg = zwanzigKGPlatte + " x 20 Kg\n" + zehnKGPlatte + " x 10 Kg\n" + fuenfKGPlatte + " x 5 Kg\n" + zweikommafuenfKGPlatte + " x 2,5 Kg\n" + einskommazweifuenfKGPlatte + " x 1,25 Kg";
 
 
 

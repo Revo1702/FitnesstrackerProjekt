@@ -76,6 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Berechnungen.cs" />
     <Compile Include="ViewModels\AddExerciseViewModel.cs" />
     <Compile Include="ViewModels\BerechnungViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

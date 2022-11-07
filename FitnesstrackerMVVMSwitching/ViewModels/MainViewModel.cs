@@ -15,8 +15,26 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         public Action Close { get; set; }
         private ICommand _neuesTrainingStarten;
         private DelegateCommand _closeCommand;
-
+        private ICommand _openBerechnungen;
         public DelegateCommand CloseCommand => _closeCommand ?? (_closeCommand = new DelegateCommand(NeuesTrainingStarten));
+
+        public ICommand OpenBerechnungen
+        {
+            get
+            {
+                if(_openBerechnungen == null)
+                {
+                    _openBerechnungen = new RelayCommand(c => BerechnungenViewOeffnen());
+                }
+                return _openBerechnungen;
+            }
+        }
+
+        void BerechnungenViewOeffnen()
+        {
+            BerechnungView bv = new BerechnungView();
+            bv.Show();
+        }
 
         void NeuesTrainingStarten()
         {

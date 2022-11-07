@@ -12,9 +12,22 @@
     </Window.DataContext>
     <Grid>
         <Label Content="Brechnungen" HorizontalAlignment="Left" Margin="21,13,0,0" VerticalAlignment="Top" Height="26" Width="81"/>
-        <Label Content="1RepMax:" HorizontalAlignment="Left" Margin="37,44,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="98,47,0,0" TextWrapping="Wrap" Text="{Binding RepMax}" VerticalAlignment="Top" Width="50"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="169,47,0,0" TextWrapping="Wrap" Text="Wiederholungen" VerticalAlignment="Top" Width="96"/>
+        <Label Content="1RepMax:" HorizontalAlignment="Left" Margin="32,44,0,0" VerticalAlignment="Top"/>
+        <Label Content="Gewicht" HorizontalAlignment="Left" Margin="174,44,0,0" VerticalAlignment="Top" Width="53"/>
+        <Label Content="Wiederholungen" HorizontalAlignment="Left" Margin="285,44,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="133,47,0,0" TextWrapping="Wrap" Text="{Binding Gewicht}" VerticalAlignment="Top" Width="36"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="246,47,0,0" TextWrapping="Wrap" Text="{Binding Wiederholungen}" VerticalAlignment="Top" Width="34"/>
+        <Label Content="{Binding MessageOneRepMax}" HorizontalAlignment="Left" Margin="483,44,0,0" VerticalAlignment="Top"/>
+        <Button Command="{Binding BerechneOneRepMaxCommand}" Content="Berechnen" HorizontalAlignment="Left" Margin="396,47,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Command="{Binding OpenMainView}" Content="Zurück" HorizontalAlignment="Left" Margin="21,372,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Plattenrechner:" HorizontalAlignment="Left" Margin="32,82,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="133,86,0,0" TextWrapping="Wrap" Text="{Binding Gewicht}" VerticalAlignment="Top" Width="36"/>
+        <Label Content="Gewicht" HorizontalAlignment="Left" Margin="174,82,0,0" VerticalAlignment="Top" Width="53"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="246,85,0,0" TextWrapping="Wrap" Text="{Binding StangeGewicht}" VerticalAlignment="Top" Width="34"/>
+        <Label Content="Stangengewicht" HorizontalAlignment="Left" Margin="285,82,0,0" VerticalAlignment="Top"/>
+        <Button Command="{Binding BerechneGewichtsPlattenCommand}" Content="Berechnen" HorizontalAlignment="Left" Margin="396,86,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Label Content="{Binding MessageGewichtsPlatten}" HorizontalAlignment="Left" Margin="483,82,0,0" VerticalAlignment="Top"/>
+
 
     </Grid>
 </Window>

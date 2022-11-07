@@ -27,10 +27,10 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Button Content="Neues Training Starten" Command="{Binding CloseCommand}" Height="40" Width="200" Grid.Row="2" Grid.Column="0">
-                
-            </Button>
+            <Button Content="Neues Training Starten" Command="{Binding CloseCommand}" Grid.Row="1"/>
+            <Button Content="Hilfsberechnungen" Command="{Binding OpenBerechnungen}" Grid.Row="2"/>
+            <Button Content="Vorherige Trainings Anzeigen" Grid.Row="0"/>
         </Grid>
-        <Grid />
+        
     </DockPanel>
 </Window>
