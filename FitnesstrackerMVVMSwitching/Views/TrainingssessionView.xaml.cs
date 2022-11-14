@@ -22,6 +22,7 @@ namespace FitnesstrackerMVVMSwitching.Views
     {
         public TrainingssessionView()
         {
+            this.DataContext = this;
             InitializeComponent();
             Loaded += TrainingssessionViewLoaded;
         }

@@ -10,7 +10,15 @@
     <Window.DataContext>
         <vm:AddExerciseViewModel/>
     </Window.DataContext>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" >
-            <StackPanel Name="StackPanel" HorizontalAlignment="Center" Width="700" Orientation="Horizontal"/>
-        </ScrollViewer>
+    <Grid Grid.Row="{Binding RowDef}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="ListBox1" SelectedIndex="{Binding SelectedIndex}" ItemsSource="{Binding ListOfUebungen}" Grid.Column="0" Grid.Row="0"/>
+        <Button Content="Auswählen" Grid.Row="1" Command="{Binding Auswaehlen}"/>
+    </Grid>
 </Window>
