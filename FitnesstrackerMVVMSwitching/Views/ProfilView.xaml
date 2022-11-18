@@ -10,7 +10,6 @@
     <Window.DataContext>
         <vm:ProfilViewModel></vm:ProfilViewModel>
     </Window.DataContext>
-
     <Viewbox Margin="0,0,3.6,3">
         <Grid>
             <Grid.ColumnDefinitions>

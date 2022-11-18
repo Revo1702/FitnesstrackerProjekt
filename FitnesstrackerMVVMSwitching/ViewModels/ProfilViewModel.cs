@@ -19,6 +19,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         private ICommand _speichernCommand;
         private ICommand _openMainView;
 
+        public event PropertyChangedEventHandler PropertyChanged;
         public ICommand OpenMainView
         {
             get
@@ -43,7 +44,6 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
                 return _speichernCommand;
             }
         }
-
         public string Name
         {
             get
@@ -99,9 +99,6 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
                 _gewicht = Gewicht;
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         private void SpeichereProfil()
         {
             DataAccess.DBAccess.ProfilSpeichern(Name, Nachname, Alter, Groesse, Gewicht);
