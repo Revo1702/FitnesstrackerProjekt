@@ -17,7 +17,23 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         private double _groesse;
         private double _gewicht;
         private ICommand _speichernCommand;
+        private ICommand _openMainView;
 
+        public ICommand OpenMainView
+        {
+            get
+            {
+                if (_openMainView == null)
+                {
+                    _openMainView = new RelayCommand(c => MainViewOeffnen());
+                }
+                return _openMainView;
+            }
+        }
+        void MainViewOeffnen()
+        {
+            
+        }
         public ICommand SpeichernCommand
         {
             get

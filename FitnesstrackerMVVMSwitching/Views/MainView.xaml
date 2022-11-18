@@ -26,9 +26,11 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <Button Content="Neues Training Starten" Command="{Binding CloseCommand}" Grid.Row="1"/>
             <Button Content="Hilfsberechnungen" Command="{Binding OpenBerechnungen}" Grid.Row="2"/>
+            <Button Content="Profil" Command="{Binding OpenProfil}" Grid.Row="3"/>
             <Button Content="Vorherige Trainings Anzeigen" Grid.Row="0"/>
         </Grid>
         
