@@ -17,11 +17,13 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         private double _gewicht;
         private int _wiederholungen;
         private double _stangeGewicht;
+        private double _groesse;
         private ICommand _berechneOneRepMaxCommand;
         private ICommand _berechneGewichtsPlattenCommand;
+        private ICommand _berechneBMICommand;
         private ICommand _openMainView;
-        private string _messageOneRepMax = "Ergebnis";
-        private string _messageGewichtsPlatten = "Ergebnis";
+        private string _message;
+        private Visibility _visibleState = Visibility.Hidden;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -43,36 +45,29 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             //MainView mv = new MainView();
             //mv.Show();
         }
-
-        public string MessageOneRepMax
+        
+        public string Message
         {
             get
             {
-                return _messageOneRepMax;
+                return _message;
             }
             set
             {
-                _messageOneRepMax = value;
+                _message = value;
                 if (PropertyChanged != null)
-                    PropertyChanged(this, new PropertyChangedEventArgs("MessageOneRepMax"));
-            }
-        }
-
-        public string MessageGewichtsPlatten
-        {
-            get
-            {
-                return _messageGewichtsPlatten;
-            }
-            set
-            {
-                _messageGewichtsPlatten = value;
-                if (PropertyChanged != null)
-                    PropertyChanged(this, new PropertyChangedEventArgs("MessageGewichtsPlatten"));
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Message"));
+                    PropertyChanged(this, new PropertyChangedEventArgs("VisibleState"));
+                }
             }
         }
         
-        
+        public Visibility VisibleState 
+        {  
+            get { return _visibleState; }
+            set { _visibleState = value; }
+        }
         public double Gewicht
         {
             get { return _gewicht; }
@@ -91,6 +86,11 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             get { return _stangeGewicht; }
             set { _stangeGewicht = value; }
         }
+        public double Groesse
+        {
+            get { return _groesse; }
+            set { _groesse = value; }
+        }
 
         public ICommand BerechneOneRepMaxCommand
         {
@@ -106,7 +106,8 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             try
             {
                 string ErgebnisOneRepMax = Convert.ToString(Berechnungen.BerechneOneRepMax(Wiederholungen, Gewicht));
-                MessageOneRepMax = ErgebnisOneRepMax + " kg";
+                Message = "Ergebnis: " + ErgebnisOneRepMax + " kg";
+                VisibleState = Visibility.Visible;
             }
             catch(Exception e)
             {
@@ -129,13 +130,39 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             try
             {
                 string ErgebnisGewichtsPlatten = Convert.ToString(Berechnungen.BerechneGewichtsplatten(Gewicht, StangeGewicht));
-                MessageGewichtsPlatten = ErgebnisGewichtsPlatten;
+                Message = "Ergebnis: " + ErgebnisGewichtsPlatten;
+                VisibleState = Visibility.Visible;
             }
             catch (Exception e)
             {
                 MessageBox.Show("Die Eingabe ist inkorrekt");
             }
         }
+
+        public ICommand BerechneBMICommand
+        {
+            get
+            {
+                if (_berechneBMICommand == null)
+                    _berechneBMICommand = new RelayCommand(c => BerechneBMI());
+                return _berechneBMICommand;
+            }
+        }
+        private void BerechneBMI()
+        {
+            try
+            {
+                string ErgebnisBMI = Convert.ToString(Berechnungen.BMIRechner(Gewicht, Groesse));
+                Message = ErgebnisBMI;
+                VisibleState = Visibility.Visible;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Die Eingabe ist inkorrekt");
+            }
+        }
+
+        //Kalorienrechner noch einbauen
 
 
         public BerechnungViewModel()

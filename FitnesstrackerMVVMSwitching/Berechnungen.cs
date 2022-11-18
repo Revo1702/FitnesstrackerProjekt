@@ -102,7 +102,7 @@ namespace Model
             return erg;
         }
 
-        public string Kalorienrechner()
+        public static string Kalorienrechner()
         {
             Console.Write("Dein alter: ");
             double alter = Convert.ToDouble(Console.ReadLine());
@@ -149,16 +149,12 @@ namespace Model
             return returnString;
         }
 
-        public string BMIRechner(double weight, double height)
+        public static string BMIRechner(double weight, double height)
         {
+            height =height/ 100;
             double bmi = weight / (height * height);
-
-
-
-            Console.WriteLine("Dein BMI ist: " + bmi);
-            Console.Write("Klassifizierung: ");
+                                    
             string returnString = "";
-
 
             if (bmi < 18.5)
                 returnString = "Untergewicht";
@@ -173,6 +169,7 @@ namespace Model
             else
                 returnString = "Adipositas Grad 3";
 
+            returnString = "Klassifizierung: " + returnString + "\nDein BMI ist : " + bmi;
             return returnString;
         }
     }
