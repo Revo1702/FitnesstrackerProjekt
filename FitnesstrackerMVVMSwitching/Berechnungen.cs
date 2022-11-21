@@ -102,23 +102,9 @@ namespace Model
             return erg;
         }
 
-        public static string Kalorienrechner()
+        public static string Kalorienrechner(double alter, double gewicht, double groesse, int palwert)
         {
-            Console.Write("Dein alter: ");
-            double alter = Convert.ToDouble(Console.ReadLine());
-
-
-
-            Console.Write("Dein Gewicht: ");
-            double gewicht = Convert.ToDouble(Console.ReadLine());
-
-
-
-            Console.Write("Deine Größe: ");
-            double groesse = Convert.ToDouble(Console.ReadLine());
-
-
-
+            groesse = groesse / 100;
             double grundumsatz = Math.Round((10 * gewicht) + (6.25 * groesse) - (5 * alter) + 5, 2);
 
 
@@ -137,7 +123,7 @@ namespace Model
 
 
 
-            double arbeitsumsatz = Math.Round(grundumsatz * palwerte[4], 2);
+            double arbeitsumsatz = Math.Round(grundumsatz * palwerte[palwert], 2);
 
 
 
@@ -145,7 +131,7 @@ namespace Model
 
 
 
-            string returnString = "dein täglicher Kalorienbedarf beträgt: " + gesamtumsatz;
+            string returnString = "Dein täglicher Kalorienbedarf beträgt: " + gesamtumsatz;
             return returnString;
         }
 

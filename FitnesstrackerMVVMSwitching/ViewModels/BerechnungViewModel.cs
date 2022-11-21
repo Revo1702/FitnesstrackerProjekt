@@ -18,9 +18,12 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         private int _wiederholungen;
         private double _stangeGewicht;
         private double _groesse;
+        private int _alter;
+        private int _palwert;
         private ICommand _berechneOneRepMaxCommand;
         private ICommand _berechneGewichtsPlattenCommand;
         private ICommand _berechneBMICommand;
+        private ICommand _berechneKalorienCommand;
         private ICommand _openMainView;
         private string _message;
         private Visibility _visibleState = Visibility.Hidden;
@@ -91,7 +94,16 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             get { return _groesse; }
             set { _groesse = value; }
         }
-
+        public int Alter
+        {
+            get { return _alter; }
+            set { _alter = value; }
+        }
+        public int Palwert
+        {
+            get { return _palwert; }
+            set { _palwert = value; }
+        }
         public ICommand BerechneOneRepMaxCommand
         {
             get
@@ -162,7 +174,28 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             }
         }
 
-        //Kalorienrechner noch einbauen
+        public ICommand BerechneKalorienCommand
+        {
+            get
+            {
+                if (_berechneKalorienCommand == null)
+                    _berechneKalorienCommand = new RelayCommand(c => BerechneKalorien());
+                return _berechneKalorienCommand;
+            }
+        }
+        private void BerechneKalorien()
+        {
+            try
+            {
+                string ErgebnisKalorien = Convert.ToString(Berechnungen.Kalorienrechner(Alter, Gewicht, Groesse, Palwert));
+                Message = ErgebnisKalorien;
+                VisibleState = Visibility.Visible;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Die Eingabe ist inkorrekt");
+            }
+        }
 
 
         public BerechnungViewModel()

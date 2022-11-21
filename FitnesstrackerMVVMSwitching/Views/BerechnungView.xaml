@@ -25,13 +25,23 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="246,85,0,0" TextWrapping="Wrap" Text="{Binding StangeGewicht}" VerticalAlignment="Top" Width="34"/>
         <Label Content="Stangengewicht" HorizontalAlignment="Left" Margin="285,82,0,0" VerticalAlignment="Top"/>
         <Button Command="{Binding BerechneGewichtsPlattenCommand}" Content="Berechnen" HorizontalAlignment="Left" Margin="396,86,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <TextBox Visibility="{Binding VisibleState}" HorizontalAlignment="Left" Height="146" Margin="246,265,0,0" TextWrapping="Wrap" Text="{Binding Message}" VerticalAlignment="Top" Width="225"/>
+        <TextBox Visibility="{Binding VisibleState}" HorizontalAlignment="Left" Height="135" Margin="246,286,0,-0.333" TextWrapping="Wrap" Text="{Binding Message}" VerticalAlignment="Top" Width="225" IsReadOnly="True"/>
         <Label Content="BMI Auswertung:" HorizontalAlignment="Left" Margin="32,156,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="133,160,0,0" TextWrapping="Wrap" Text="{Binding Gewicht}" VerticalAlignment="Top" Width="36"/>
-        <Label Content="Gewicht" HorizontalAlignment="Left" Margin="174,156,0,0" VerticalAlignment="Top" Width="53"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="246,160,0,0" TextWrapping="Wrap" Text="{Binding Groesse}" VerticalAlignment="Top" Width="34"/>
-        <Label Content="Größe in cm" HorizontalAlignment="Left" Margin="285,156,0,0" VerticalAlignment="Top"/>
+        <Label Content="Körpergewicht" HorizontalAlignment="Left" Margin="174,156,0,0" VerticalAlignment="Top" Width="87"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="266,160,0,0" TextWrapping="Wrap" Text="{Binding Groesse}" VerticalAlignment="Top" Width="34"/>
+        <Label Content="Größe in cm" HorizontalAlignment="Left" Margin="305,156,0,0" VerticalAlignment="Top"/>
         <Button Command="{Binding BerechneBMICommand}" Content="Berechnen" HorizontalAlignment="Left" Margin="396,159,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Label Content="Kalorienrechner:" HorizontalAlignment="Left" Margin="32,224,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="133,228,0,0" TextWrapping="Wrap" Text="{Binding Gewicht}" VerticalAlignment="Top" Width="36"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="266,227,0,0" TextWrapping="Wrap" Text="{Binding Groesse}" VerticalAlignment="Top" Width="34"/>
+        <Label Content="Größe in cm" HorizontalAlignment="Left" Margin="305,224,0,0" VerticalAlignment="Top"/>
+        <Label Content="Körpergewicht" HorizontalAlignment="Left" Margin="174,224,0,0" VerticalAlignment="Top" Width="87"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="396,228,0,0" TextWrapping="Wrap" Text="{Binding Alter}" VerticalAlignment="Top" Width="34"/>
+        <Label Content="Alter" HorizontalAlignment="Left" Margin="436,224,0,0" VerticalAlignment="Top"/>
+        <Button Command="{Binding BerechneKalorienCommand}" Content="Berechnen" HorizontalAlignment="Left" Margin="485,229,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="133,255,0,0" TextWrapping="Wrap" Text="{Binding Palwert}" VerticalAlignment="Top" Width="36"/>
+        <Label Content="Körperlicheanstrengung 0-5 (Schlafen - Starke Anstrengung)" HorizontalAlignment="Left" Margin="174,255,0,0" VerticalAlignment="Top" Width="338"/>
 
 
     </Grid>
