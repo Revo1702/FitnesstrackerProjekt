@@ -14,7 +14,6 @@ namespace Model
         private double _groesse { get; set; }
         private double _gewicht { get; set; }
         
-
         public Profil (string name, string nachnahme,int alter, double groesse, double gewicht)
         {
             _name = name;
@@ -22,7 +21,6 @@ namespace Model
             _alter = alter;
             _groesse = groesse;
             _gewicht = gewicht;
-
         }
         public Profil (string name, int alter, double groesse, double gewicht)
         {
@@ -30,7 +28,6 @@ namespace Model
             _alter = alter;
             _groesse = groesse;
             _gewicht = gewicht;
-
         }
         public Profil(int alter, double groesse, double gewicht)
         {

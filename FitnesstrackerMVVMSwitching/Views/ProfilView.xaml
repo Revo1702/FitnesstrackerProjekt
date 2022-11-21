@@ -4,44 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnesstrackerMVVMSwitching.Views"
-        xmlns:vm ="clr-namespace:FitnesstrackerMVVMSwitching.ViewModels"
+         xmlns:vm ="clr-namespace:FitnesstrackerMVVMSwitching.ViewModels"
         mc:Ignorable="d"
-        Title="ProfilView" Height="503.982" Width="762.043">
+        Title="ProfilView" Height="450" Width="800">
     <Window.DataContext>
-        <vm:ProfilViewModel></vm:ProfilViewModel>
+        <vm:ProfilViewModel/>
     </Window.DataContext>
-    <Viewbox Margin="0,0,3.6,3">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            <TextBox Grid.Row="2" Text="{Binding Name}" />
-            <TextBox Grid.Row="4" Text="{Binding Nachname}"/>
-            <TextBox Grid.Row="6" Text="{Binding Alter}" />
-            <TextBox Grid.Row="8" Text="{Binding Groeße}"/>
-            <TextBox Grid.Row="10" Text="{Binding Gewicht}"/>
-            <Label Grid.Row="1">Name:</Label>
-            <Label Grid.Row="3">Nachname:</Label>
-            <Label Grid.Row="5">Alter:</Label>
-            <Label Grid.Row="7">Größe:</Label>
-            <Label Grid.Row="9">Gewicht:</Label>
-            <Image HorizontalAlignment="Left" Height="100" Margin="-116,0.4,0,0" Grid.Row="2" Grid.RowSpan="5" VerticalAlignment="Top" Width="69"/>
-            <Button Command="{Binding SpeichernCommand}" Grid.Row="11">Speichern</Button>
-        </Grid>
-    </Viewbox>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="2" Text="{Binding Name}" />
+        <TextBox Grid.Row="4" Text="{Binding Nachname}"/>
+        <TextBox Grid.Row="6" Text="{Binding Alter}" />
+        <TextBox Grid.Row="8" Text="{Binding Groeße}"/>
+        <TextBox Grid.Row="10" Text="{Binding Gewicht}"/>
+        <Label Grid.Row="1">Name:</Label>
+        <Label Grid.Row="3">Nachname:</Label>
+        <Label Grid.Row="5">Alter:</Label>
+        <Label Grid.Row="7">Größe:</Label>
+        <Label Grid.Row="9">Gewicht:</Label>
+        <Image HorizontalAlignment="Left" Height="100" Margin="-116,0.4,0,0" Grid.Row="2" Grid.RowSpan="5" VerticalAlignment="Top" Width="69"/>
+        <Button Command="{Binding SpeichernCommand}" Grid.Row="11">Speichern</Button>
+    </Grid>
+
+    
 </Window>

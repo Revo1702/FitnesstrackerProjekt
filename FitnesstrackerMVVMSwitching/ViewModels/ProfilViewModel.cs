@@ -9,7 +9,7 @@ using CommandHelper;
 
 namespace FitnesstrackerMVVMSwitching.ViewModels
 {
-    class ProfilViewModel : INotifyPropertyChanged
+    public class ProfilViewModel : INotifyPropertyChanged
     {
         private string _name;
         private string _nachname;
@@ -105,7 +105,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         }
         public ProfilViewModel()
         {
-
+            Gewicht = 34.6;
         }
     }
 }
