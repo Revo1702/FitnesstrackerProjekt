@@ -52,7 +52,9 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         void BerechnungenViewOeffnen()
         {
             BerechnungView bv = new BerechnungView();
+            
             bv.Show();
+            Close?.Invoke();
         }
 
         void NeuesTrainingStarten()
