@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnesstrackerMVVMSwitching.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,14 +25,20 @@ namespace FitnesstrackerMVVMSwitching.Views
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+       
+      
+
+       
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            if (DataContext is BerechnungViewModel.ICloseWindows vm)
+            {
+                vm.Close += () =>
+                {
+                    this.Close();
+                };
+            }
         }
     }
 }

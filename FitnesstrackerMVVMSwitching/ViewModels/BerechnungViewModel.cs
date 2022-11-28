@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using CommandHelper;
+using FitnesstrackerMVVMSwitching.Views;
 using Model;
 
 namespace FitnesstrackerMVVMSwitching.ViewModels
 {
-    class BerechnungViewModel : INotifyPropertyChanged
+    class BerechnungViewModel : INotifyPropertyChanged, BerechnungViewModel.ICloseWindows
     {
-
+        public Action Close { get; set; }
         private double _gewicht;
         private int _wiederholungen;
         private double _stangeGewicht;
@@ -29,6 +30,10 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         private Visibility _visibleState = Visibility.Hidden;
 
         public event PropertyChangedEventHandler PropertyChanged;
+        public interface ICloseWindows
+        {
+            Action Close { get; set; }
+        }
 
         public ICommand OpenMainView
         {
@@ -42,17 +47,20 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             }
         }
 
+
         void MainViewOeffnen()
         {
-            //MainView muss noch geclosed werde (muss noch eingebaut werden)
-            //MainView mv = new MainView();
-            //mv.Show();
+            MainView mv = new MainView();
+            BerechnungView bv = new BerechnungView();
+            mv.Show();
+            Close?.Invoke();
         }
         
         public string Message
         {
             get
             {
+                VisibleState = Visibility.Visible;
                 return _message;
             }
             set
@@ -118,8 +126,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             try
             {
                 string ErgebnisOneRepMax = Convert.ToString(Berechnungen.BerechneOneRepMax(Wiederholungen, Gewicht));
-                Message = "Ergebnis: " + ErgebnisOneRepMax + " kg";
-                VisibleState = Visibility.Visible;
+                Message = "Ergebnis: " + ErgebnisOneRepMax + " kg";                
             }
             catch(Exception e)
             {
@@ -143,7 +150,6 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             {
                 string ErgebnisGewichtsPlatten = Convert.ToString(Berechnungen.BerechneGewichtsplatten(Gewicht, StangeGewicht));
                 Message = "Ergebnis: " + ErgebnisGewichtsPlatten;
-                VisibleState = Visibility.Visible;
             }
             catch (Exception e)
             {
@@ -166,7 +172,6 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             {
                 string ErgebnisBMI = Convert.ToString(Berechnungen.BMIRechner(Gewicht, Groesse));
                 Message = ErgebnisBMI;
-                VisibleState = Visibility.Visible;
             }
             catch (Exception e)
             {
@@ -189,7 +194,6 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             {
                 string ErgebnisKalorien = Convert.ToString(Berechnungen.Kalorienrechner(Alter, Gewicht, Groesse, Palwert));
                 Message = ErgebnisKalorien;
-                VisibleState = Visibility.Visible;
             }
             catch (Exception e)
             {
