@@ -18,6 +18,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         private double _gewicht;
         private ICommand _speichernCommand;
         private ICommand _openMainView;
+        private ICommand _profilloeschenCommand;
 
         public event PropertyChangedEventHandler PropertyChanged;
         public ICommand OpenMainView
@@ -42,6 +43,15 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
                 if (_speichernCommand == null)
                     _speichernCommand = new RelayCommand(c => SpeichereProfil());
                 return _speichernCommand;
+            }
+        }
+        public ICommand ProfilLoeschenCommand
+        {
+            get
+            {
+                if (_profilloeschenCommand == null)
+                    _profilloeschenCommand = new RelayCommand(c => ProfilLoeschen());
+                return _profilloeschenCommand;
             }
         }
         public string Name
@@ -102,6 +112,11 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         private void SpeichereProfil()
         {
             DataAccess.DBAccess.ProfilSpeichern(Name, Nachname, Alter, Groesse, Gewicht);
+        }
+
+        private void ProfilLoeschen()
+        {
+            DataAccess.DBAccess.ProfilLoeschen(Name, Nachname);
         }
         public ProfilViewModel()
         { 

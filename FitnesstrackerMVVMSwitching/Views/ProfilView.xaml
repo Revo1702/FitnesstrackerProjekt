@@ -28,6 +28,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <TextBox Grid.Row="2" Text="{Binding Name}" />
         <TextBox Grid.Row="4" Text="{Binding Nachname}"/>
@@ -41,6 +42,7 @@
         <Label Grid.Row="9">Gewicht:</Label>
         <Image HorizontalAlignment="Left" Height="100" Margin="-116,0.4,0,0" Grid.Row="2" Grid.RowSpan="5" VerticalAlignment="Top" Width="69"/>
         <Button Command="{Binding SpeichernCommand}" Grid.Row="11">Speichern</Button>
+        <Button Command="{Binding ProfilLoeschenCommand}" Grid.Row="12">Profil Löschen (Bitte Namen UND Nachnamen eintragen)</Button>
     </Grid>
 
     

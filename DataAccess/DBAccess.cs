@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Windows;
 
 namespace DataAccess
 {
@@ -43,7 +44,28 @@ namespace DataAccess
                 comm.Parameters.AddWithValue("@groesse", groesse);
                 comm.Parameters.AddWithValue("@gewicht", gewicht);
                 comm.ExecuteNonQuery();
+                CloseConnection();
+                if(name != "")
+                {
+                    MessageBox.Show("Willkommen " + name + " " + nachname + "! :)");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
 
+        public static void ProfilLoeschen(string name, string nachname)
+        {
+            try
+            {
+                var conn = OpenConnection();
+                string sqlcmd = "DELETE FROM fitnesstracker.profiles WHERE ProfileName = '" + name + "' AND ProfileSurname = '" + nachname + "'";
+                MySqlCommand comm = new MySqlCommand(sqlcmd, conn);
+                comm.ExecuteNonQuery();
+                MessageBox.Show("Das Profil " + name + " " + nachname + " wurde gelöscht");
+                CloseConnection();
             }catch(Exception e)
             {
                 Console.WriteLine(e);
