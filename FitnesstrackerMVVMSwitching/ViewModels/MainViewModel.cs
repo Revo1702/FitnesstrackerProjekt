@@ -35,7 +35,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
         void ProfilViewOeffnen()
         {
             ProfilView pv = new ProfilView();
-            pv.ShowDialog();
+            pv.Show();
         }
         public ICommand OpenBerechnungen
         {

@@ -32,7 +32,7 @@
         <TextBox Grid.Row="2" Text="{Binding Name}" />
         <TextBox Grid.Row="4" Text="{Binding Nachname}"/>
         <TextBox Grid.Row="6" Text="{Binding Alter}" />
-        <TextBox Grid.Row="8" Text="{Binding Groeße}"/>
+        <TextBox Grid.Row="8" Text="{Binding Groesse}"/>
         <TextBox Grid.Row="10" Text="{Binding Gewicht}"/>
         <Label Grid.Row="1">Name:</Label>
         <Label Grid.Row="3">Nachname:</Label>

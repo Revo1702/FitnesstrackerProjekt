@@ -52,7 +52,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             }
             set
             {
-                _name = Name;
+                _name = value;
             }
         }
         public string Nachname
@@ -63,7 +63,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             }
             set
             {
-                _nachname = Nachname;
+                _nachname = value;
             }
         }
         public int Alter
@@ -74,7 +74,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             }
             set
             {
-                _alter = Alter;
+                _alter = value;
             }
         }
         public double Groesse
@@ -85,7 +85,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             }
             set
             {
-                _groesse = Groesse;
+                _groesse = value;
             }
         }
         public double Gewicht
@@ -96,7 +96,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             }
             set
             {
-                _gewicht = Gewicht;
+                _gewicht = value;
             }
         }
         private void SpeichereProfil()
@@ -104,8 +104,7 @@ namespace FitnesstrackerMVVMSwitching.ViewModels
             DataAccess.DBAccess.ProfilSpeichern(Name, Nachname, Alter, Groesse, Gewicht);
         }
         public ProfilViewModel()
-        {
-            Gewicht = 34.6;
+        { 
         }
     }
 }

@@ -30,6 +30,26 @@ namespace DataAccess
             return listOfUebungen;
         }
 
+        public static void ProfilSpeichern(string name, string nachname, int alter, double groesse, double gewicht)
+        {
+            try
+            {
+                var conn = OpenConnection();
+                string sqlcmd = "INSERT INTO fitnesstracker.profiles (ProfileName, ProfileSurname, Age, Height, Weight) VALUES(@name, @nachname, @alter, @groesse, @gewicht)";
+                MySqlCommand comm = new MySqlCommand(sqlcmd, conn);
+                comm.Parameters.AddWithValue("@name", name);
+                comm.Parameters.AddWithValue("@nachname", nachname);
+                comm.Parameters.AddWithValue("@alter", alter);
+                comm.Parameters.AddWithValue("@groesse", groesse);
+                comm.Parameters.AddWithValue("@gewicht", gewicht);
+                comm.ExecuteNonQuery();
+
+            }catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
         public static MySqlConnection OpenConnection()
         {
             MySqlConnection conn = new MySqlConnection(connstr);
@@ -42,15 +62,6 @@ namespace DataAccess
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Close();
             return conn;
-        }
-
-        public static void ProfilSpeichern(string ProfilName, string ProfilNachname, int Alter, double Groesse, double Gewicht)
-        {
-            var conn = OpenConnection();
-            string sqlcmd = "INSERT INTO fitnesstracker.profil (ProfilName,ProfilNachname,Alter,Groesse,Gewicht) VALUES (@ProfilName,@ProfilNachname,@Alter,@Groesse,@Gewicht)";
-            MySqlCommand command = new MySqlCommand(sqlcmd, conn);
-            command.ExecuteNonQuery();
-                    
         }
     }
 }
